@@ -1,0 +1,30 @@
+.main__contacts {
+  background: #f7f5ff;
+}
+.main__contacts-title {
+  color: #3919af;
+}
+.main__contacts-content {
+  text-align: center;
+  max-width: 220px;
+  margin: 0 auto 90px;
+}
+.main__contacts-icons {
+  display: flex;
+  column-gap: 29px;
+  margin: 52px auto 0;
+}
+.main__contact {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 135%;
+  color: #3919af;
+}
+
+@media (max-width: 456px) {
+  .main__contacts-icons {
+    column-gap: 30px;
+    margin: 86px auto 0;
+  }
+}

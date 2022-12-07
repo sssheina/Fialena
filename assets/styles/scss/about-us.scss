@@ -1,0 +1,58 @@
+.main__about-us {
+  background: #3919af;
+}
+.main__about-us-title {
+  color: #ffe500;
+}
+.main__about-grid {
+  display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
+  grid-template-columns: 35% 60%;
+  column-gap: 43px;
+  align-items: center;
+}
+.main__about-grid:last-child {
+  margin-bottom: 70px;
+}
+
+.main__number {
+  max-width: 228px;
+  color: #ffe500;
+  font-weight: 900;
+  font-size: 64px;
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+.main__number-text {
+  max-width: 198px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+}
+.main__about-text {
+  max-width: 372px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 135%;
+  color: #ffffff;
+}
+.main__about-text-light {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 135%;
+  color: #ffffff;
+}
+
+@media (max-width: 456px) {
+  .main__about-grid {
+    grid-template-columns: 1fr;
+  }
+  .main__number,
+  .main__number-text,
+  .empty {
+    display: none;
+  }
+  .main__about-grid:last-child {
+    margin-bottom: 40px;
+  }
+}
