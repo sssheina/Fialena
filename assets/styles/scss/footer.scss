@@ -1,10 +1,13 @@
 .footer {
   background: #3919af;
-  max-height: 188px;
+  height: 188px;
 }
 .footer__content {
+  border: 1px solid red;
   text-align: center;
   max-width: 225px;
+  height: 100%;
+  // padding-top: 38px;
   margin: 38px auto;
 }
 .footer__link {
@@ -27,17 +30,16 @@
 .btn-up {
   font-family: "Open Sans";
   position: fixed;
-  background: rgb(0, 0, 0, 0.2);
+  background: #ffe500;
   right: 1em;
   bottom: 1em;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 50px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
   transform: translateY(0);
   opacity: 1;
@@ -48,7 +50,7 @@
 }
 
 .btn-up::before {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+  content: url("/assets/images/arrow-up.png");
 }
 
 .btn-up_hide {

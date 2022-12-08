@@ -4,8 +4,10 @@
 
 .main__grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   column-gap: 29px;
+  justify-items: center;
+  margin-bottom: 100px;
 }
 
 .main__icon {
@@ -17,19 +19,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 259px;
 }
 .main__card-title {
-  width: 169px;
   font-weight: 700;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 135%;
   color: #1e1e1e;
   text-align: center;
 }
 .main__card-subtitle {
-  width: 156px;
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 135%;
   color: #1e1e1e;
   text-align: center;
@@ -37,7 +38,7 @@
 
 .main__card-link {
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 135%;
   color: #3919af;
   margin-bottom: 30px;
