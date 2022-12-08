@@ -959,9 +959,23 @@ textarea {
 }
 
 .main__number {
+  display: flex;
+  flex-direction: row;
+}
+
+.main__number_black {
   max-width: 228px;
   color: #ffe500;
   font-weight: 900;
+  font-size: 64px;
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+
+.main__number_thin {
+  max-width: 228px;
+  color: #ffe500;
+  font-weight: 300;
   font-size: 64px;
   margin: 0;
   letter-spacing: 0.06em;
@@ -972,6 +986,7 @@ textarea {
   font-weight: 500;
   font-size: 12px;
   color: #ffffff;
+  margin-top: 4px;
 }
 
 .main__about-text {
