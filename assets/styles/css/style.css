@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -659,13 +658,11 @@ textarea {
   min-width: 300px;
   max-width: 744px;
   margin: 0 auto;
-  border: 1px solid black;
 }
 
 .container {
   max-width: 644px;
   margin: 0 50px;
-  border: 1px solid orangered;
 }
 
 @media (max-width: 456px) {
@@ -693,7 +690,6 @@ textarea {
 }
 
 .header__list {
-  border: 1px solid yellow;
   display: flex;
   justify-content: space-between;
   column-gap: 14px;
@@ -702,34 +698,14 @@ textarea {
 }
 
 .header__list li {
-  border: 1px solid greenyellow;
   list-style: none;
 }
 
 .header__link {
-  border: 1px solid blue;
+  text-decoration: none;
   font-size: 11px;
   font-weight: 500;
   color: #1e1e1e;
-}
-
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-}
-
-/* отображаем выпадающий список при наведении */
-nav ul li:hover > ul {
-  display: inherit;
-}
-
-/* первый уровень выпадающего списка */
-nav ul ul li {
-  min-width: 170px;
-  float: none;
-  display: list-item;
-  position: relative;
 }
 
 .header__burger {
@@ -752,6 +728,102 @@ nav ul ul li {
   background: #3919af;
 }
 
+@media (max-width: 456px) {
+  .header {
+    height: 70px;
+  }
+  .header__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__company {
+    font-weight: 400;
+    font-size: 12px;
+    color: #3919af;
+  }
+  .header__list {
+    padding: 0;
+    display: flex;
+    background: #3919af;
+    position: fixed;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: #201a43;
+    width: 90%;
+    height: 100%;
+    top: -110%;
+    left: 0;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+  }
+  .header__list.active {
+    top: 0;
+    padding: 0;
+  }
+  .header__link {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 31px;
+    cursor: pointer;
+  }
+  .header__burger::before {
+    z-index: 10;
+    content: "";
+    background-color: #3919af;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #3919af;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    top: 14px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger::after {
+    z-index: 10;
+    content: "";
+    background-color: #3919af;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    width: 100%;
+    top: 14px;
+    height: 3px;
+  }
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    width: 100%;
+    bottom: 14px;
+    height: 3px;
+  }
+}
 .section-title {
   margin: 0 auto;
   font-weight: 900;
@@ -817,8 +889,10 @@ nav ul ul li {
 
 .main__grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   column-gap: 29px;
+  justify-items: center;
+  margin-bottom: 100px;
 }
 
 .main__icon {
@@ -831,21 +905,21 @@ nav ul ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 259px;
+  gap: 6px;
 }
 
 .main__card-title {
-  width: 169px;
   font-weight: 700;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 135%;
   color: #1e1e1e;
   text-align: center;
 }
 
 .main__card-subtitle {
-  width: 156px;
-  font-weight: 400;
-  font-size: 9px;
+  font-weight: 500;
+  font-size: 10px;
   line-height: 135%;
   color: #1e1e1e;
   text-align: center;
@@ -853,7 +927,7 @@ nav ul ul li {
 
 .main__card-link {
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 135%;
   color: #3919af;
   margin-bottom: 30px;
@@ -866,6 +940,7 @@ nav ul ul li {
 }
 .main__about-us {
   background: #3919af;
+  height: 868px;
 }
 
 .main__about-us-title {
@@ -1156,12 +1231,14 @@ nav ul ul li {
 }
 .footer {
   background: #3919af;
-  max-height: 188px;
+  height: 188px;
 }
 
 .footer__content {
+  border: 1px solid red;
   text-align: center;
   max-width: 225px;
+  height: 100%;
   margin: 38px auto;
 }
 
@@ -1186,29 +1263,28 @@ nav ul ul li {
 .btn-up {
   font-family: "Open Sans";
   position: fixed;
-  background: rgba(0, 0, 0, 0.2);
+  background: #ffe500;
   right: 1em;
   bottom: 1em;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 50px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
   transform: translateY(0);
   opacity: 1;
 }
 
 .btn-up:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #ffe500;
   transform: scale(1.1);
 }
 
 .btn-up::before {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+  content: url("/assets/images/arrow-up.png");
 }
 
 .btn-up_hide {
@@ -1220,21 +1296,23 @@ nav ul ul li {
   transform: translateY(100px);
 }
 
-.main__button, .main__working-button {
-  background-color: #FFE600;
-  color: #3919AF;
+.main__button,
+.main__working-button {
+  background-color: #ffe600;
+  color: #3919af;
   border: none;
-  box-shadow: 0 5px #3919AF;
+  box-shadow: 0 5px #3919af;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
 }
 
-.main__button:hover, .main__working-button:hover {
+.main__button:hover,
+.main__working-button:hover {
   transform: none;
   -webkit-transform: translateY(2px);
-  box-shadow: 0 3px #3919AF;
+  box-shadow: 0 3px #3919af;
 }
 
 /*# sourceMappingURL=style.css.map */
