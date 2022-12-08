@@ -671,16 +671,28 @@ textarea {
   }
 }
 .header {
-  z-index: 10;
-  background: rgb(176, 152, 204);
-  height: 90px;
+  position: fixed;
+  max-width: 744px;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 744px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.13);
+  z-index: 2;
 }
 
 .header__content {
-  height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  height: 90px;
 }
 
 .header__company {
@@ -689,12 +701,18 @@ textarea {
   color: #3919af;
 }
 
+.header__logo-img {
+  vertical-align: baseline;
+}
+
 .header__list {
   display: flex;
   justify-content: space-between;
   column-gap: 14px;
   margin: 0 14px 0 30px;
   padding: 0;
+  width: 442px;
+  align-items: center;
 }
 
 .header__list li {
@@ -859,6 +877,7 @@ textarea {
   line-height: 163%;
   padding: 0;
   color: #ffe600;
+  margin-top: 98px;
 }
 
 .main__subtitle {
@@ -867,6 +886,7 @@ textarea {
   font-weight: 600;
   line-height: 200%;
   color: #1e1e1e;
+  margin-top: 5px;
 }
 
 .main__button {
