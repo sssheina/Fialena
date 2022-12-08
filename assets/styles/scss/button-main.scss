@@ -1,0 +1,18 @@
+.main__button,
+.main__working-button {
+  background-color: #ffe600;
+  color: #3919af;
+  border: none;
+  box-shadow: 0 5px #3919af;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.main__button:hover,
+.main__working-button:hover {
+  transform: none;
+  -webkit-transform: translateY(2px);
+  box-shadow: 0 3px #3919af;
+}
