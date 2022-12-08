@@ -5,6 +5,11 @@
 .main__about-us-title {
   color: #ffe500;
 }
+.main__about-allgrids {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 .main__about-grid {
   display: grid;
   // grid-template-columns: repeat(auto-fill, minmax(228px, 1fr));
@@ -42,6 +47,9 @@
   font-size: 12px;
   color: #ffffff;
   margin-top: 4px;
+}
+#last_number {
+  margin-top: -71px;
 }
 .main__about-text {
   max-width: 372px;

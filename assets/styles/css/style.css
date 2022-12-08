@@ -947,6 +947,12 @@ textarea {
   color: #ffe500;
 }
 
+.main__about-allgrids {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
 .main__about-grid {
   display: grid;
   grid-template-columns: 35% 60%;
@@ -987,6 +993,10 @@ textarea {
   font-size: 12px;
   color: #ffffff;
   margin-top: 4px;
+}
+
+#last_number {
+  margin-top: -71px;
 }
 
 .main__about-text {
