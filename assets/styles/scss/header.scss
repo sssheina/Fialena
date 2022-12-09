@@ -11,6 +11,8 @@
 //   //   align-items: center;
 //   //   column-gap: 14px;
 // }
+
+
 .header {
   position: fixed;
   max-width: 744px;
@@ -24,7 +26,7 @@
   top: 0;
   width: 744px;
   height: 100%;
-  background:rgba(255, 255, 255, 0.13);
+  background:linear-gradient(90deg, rgba(156,120,254,0.3) 0%, rgba(172,145,254,0.3) 30%, rgba(189,168,254,0.3) 63%, rgba(204,189,254,0.3) 100%);;
   z-index: 2;
 }
 .header__content {
@@ -101,8 +103,8 @@
   font-size: 11px;
 }
 #language:focus {
-  border: 1px solid #3919af;
-  background: #3919af;
+  // border: 1px solid #3919af;
+  // background: #3919af;
 }
 
 @media (max-width: 456px) {

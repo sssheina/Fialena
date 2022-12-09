@@ -8,7 +8,9 @@
   max-width: 510px;
   margin: 0 auto 27px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  column-gap: 15px;
+  
 }
 .main__team-card:last-child {
   margin-bottom: 0;
@@ -18,13 +20,20 @@
   max-width: 112px;
 }
 .main__team-info {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   max-width: 324px;
+  margin: 0 auto;
+  
+  
 }
 .main__team-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 135%;
   color: #3919af;
+  
 }
 .main__team-subtitle {
   font-weight: 500;
@@ -56,6 +65,7 @@
   .main__team-text {
     margin: 0 auto 8px;
     text-align: center;
+    width: 100%;
   }
   .main__team-icon {
     margin: 10px auto 25px;

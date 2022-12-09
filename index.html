@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.svg"
+      type="image/svg"
+    />
     <link rel="stylesheet" href="./assets/styles/css/style.css">
     <title>FIALENA</title>
 </head>
@@ -14,47 +19,45 @@
     <!-- ГЛАВНАЯ СТРАНИЦА -->
 
     <!-- header -->
-    <header class="header">
+
+    <section class="navigation">
+    <header class="header" style="/* border-bottom: 1px solid rgba(255, 255, 255, 0.2); *//* padding: 50px 0px; */">
         <div class="header__content container">
-            <a class="header__logo" href="#"><img class="header__logo-img" src="./assets/images/logotype_full.png" alt="logo"></a>
-            <!-- <p class="header__company"><b>Fialena</b> s.r.o.</p> -->
+        <div class="logo"><a class="header__logo" href="index.html"><img class="header__logo-img" src="./assets/images/logotype_full_white.svg" alt="logo"></a>
+        </div>
+            
             <nav class="header-menu">
                 <ul class="header__list">
-                    <li><a href="#" class="header__link">О НАС</a></li>
-                    <li><a href="#" class="header__link">УСЛУГИ</a></li>
-                    <li><a href="" class="header__link">КОМАНДА</a></li>
-                    <li><a href="" class="header__link">КАК МЫ РАБОТАЕМ</a></li>
-                    <li><a href="" class="header__link">КОНТАКТЫ</a></li>
-                    <!-- <li><a href="" class="header__link">ЯЗЫКИ</a></li> -->
-                    <select name="language" id="language">
-                        <option value="ru" data-url="https://example.com/?brand=1">RU</option>
-                        <option value="ua" data-url="https://example.com/?brand=1" selected>UA</option>
-                        <option value="en"><a href="#1.html">EN</a></option>
-                        <option value="cz"><a href="#1.html">CZ</a></option>
+                    <li><a href="#about" class="header__link">О НАС</a></li>
+                    <li><a href="#help" class="header__link">УСЛУГИ</a></li>
+                    <li><a href="#team" class="header__link">КОМАНДА</a></li>
+                    <li><a href="#working" class="header__link">КАК МЫ РАБОТАЕМ</a></li>
+                    <li><a href="#contacts" class="header__link">КОНТАКТЫ</a></li>
+                    
+                    <select name="language" id="language" >
+                        <option value="http://www.google.com">RU</option>
+                        <option value="ua" selected>UA</option>
+                        <option value="http://www.youtube.com">EN</option>
+                        <option value="https://www.gurustop.net">CZ</option>
                     </select>
-                    <!-- <ul class="submenu" id="language">
-                        <li><a href="">RU</a></li>
-                        <li><a href="">UA</a></li>
-                        <li><a href="">CZ</a></li>
-                        <li><a href="">EN</a></li>
-                    </ul>
-                </ul> -->
-            </nav>
+                    
+            
             <div class="header__burger">
                 <span></span>
             </div>
-
+        </nav>
         </div>
     </header>
-
+</section>
 
     <!-- блок главной страницы -->
+
     <section class="main__main-section">
 
         <div class="main__main-content container">
             <h1 class="main__title">ПОЛУЧИТЕ НАДЁЖНУЮ РАБОТУ И ЖИЛЬЁ В ЧЕХИИ УЖЕ СЕГОДНЯ</h1>
             <h2 class="main__subtitle">ОКАЖЕМ ЮРИДИЧЕСКУЮ И ПСИХОЛОГИЧЕСКУЮ ПОДДЕРЖКУ</h2>
-            <button class="main__button"><a href="#">НАЙТИ РАБОТУ</a></button>
+            <button class="main__button"><a href="#contacts">НАЙТИ РАБОТУ</a></button>
         </div>
 
     </section>
@@ -62,13 +65,15 @@
     <!-- <main class="container"> -->
 
     <!-- ЧЕМ МЫ МОЖЕМ ПОМОЧЬ -->
+
+    <a name="help"></a>
     <section class="main__help-section">
         <div class="main__help-content container ">
             <h2 class="main__help-title section-title">ЧЕМ МЫ МОЖЕМ ПОМОЧЬ</h2>
 
             <div class="main__grid-container">
                 <div class="main__card">
-                    <div class="main__icon"><img src="./assets/images/battery-icon.png" alt="Battery Icon">
+                    <div class="main__icon"><img src="./assets/images/battery-icon.svg" alt="Battery Icon">
                     </div>
 
                     <div class="main__card-text">
@@ -77,14 +82,16 @@
                             ДНЕ?
                         </p>
                         <p class="main__card-subtitle">МЫ ПОМОЖЕМ НАЙТИ СТАБИЛЬНУЮ РАБОТУ</p>
-                        <p class="main__card-link">УЗНАТЬ БОЛЬШЕ<img src="./assets/images/Arrow 3.png" alt="arrow">
-                        </p>
+                        <div class="main__card-l">
+                            
+                            <a class="main__card-link" href="#contacts">УЗНАТЬ БОЛЬШЕ</a><img src="./assets/images/Arrow 3.svg" alt="arrow">
+                        </div>
                     </div>
                 </div>
 
                 <div class="main__card">
 
-                    <div class="main__icon"><img src="./assets/images/low-icon.png" alt="Low Icon">
+                    <div class="main__icon"><img src="./assets/images/low-icon.svg" alt="Low Icon">
                     </div>
                     <div class="main__card-text">
                         <p class="main__card-title">СЛОЖНО РАЗОБРАТЬСЯ В ЗАКОНАХ ЧУЖОЙ СТРАНЫ, ЧТОБЫ ВОСПОЛЬЗОВАТЬСЯ
@@ -93,13 +100,15 @@
                         <p class="main__card-subtitle">ПРОКОНСУЛЬТИРУЕМ ПО ЮРИДИЧЕСКИМ ВОПРОСАМ, ОКАЖЕМ ВИЗОВУЮ
                             ПОДДЕРЖКУ
                         </p>
-                        <p class="main__card-link">УЗНАТЬ БОЛЬШЕ <img src="./assets/images/Arrow 3.png" alt="arrow">
-                        </p>
+                        <div class="main__card-l">
+                            
+                            <a class="main__card-link" href="#contacts">УЗНАТЬ БОЛЬШЕ</a><img src="./assets/images/Arrow 3.svg" alt="arrow">
+                        </div>
                     </div>
                 </div>
 
                 <div class="main__card">
-                    <div class="main__icon"><img src="./assets/images/house-icon.png" alt="House Icon">
+                    <div class="main__icon"><img src="./assets/images/house-icon.svg" alt="House Icon">
                     </div>
                     <div class="main__card-text">
                         <p class="main__card-title">ВАС СТРАШИТ НОВЫЙ ДЕНЬ ИЗ-ЗА ТОГО, ЧТО НЕТ ПОСТОЯННОГО ЖИЛЬЯ?
@@ -107,14 +116,16 @@
                         <p class="main__card-subtitle">ПОМОЖЕМ ПОДОБРАТЬ ПОДХОДЯЩЕЕ ЖИЛЬЁ НЕДАЛЕКО ОТ МЕСТА НОВОЙ
                             РАБОТЫ
                         </p>
-                        <p class="main__card-link">УЗНАТЬ БОЛЬШЕ <img src="./assets/images/Arrow 3.png" alt="arrow">
-                        </p>
+                        <div class="main__card-l">
+                            
+                            <a class="main__card-link" href="#contacts">УЗНАТЬ БОЛЬШЕ</a><img src="./assets/images/Arrow 3.svg" alt="arrow">
+                        </div>
                     </div>
                 </div>
 
                 <div class="main__card">
 
-                    <div class="main__icon"><img src="./assets/images/child-icon.png" alt="Child">
+                    <div class="main__icon"><img src="./assets/images/child-icon.svg" alt="Child">
                     </div>
                     <div class="main__card-text">
                         <p class="main__card-title">ОПАСАЕТЕСЬ ОСТАВЛЯТЬ ДЕТЕЙ ОДНИХ И ТЕРЯЕТЕ ИЗ-ЗА ЭТОГО РАБОТУ?
@@ -122,25 +133,29 @@
                         <p class="main__card-subtitle"> НАЙДЁМ ВОЗМОЖНОСТЬ ПРИСМОТРЕТЬ ЗА ВАШИМИ ДЕТЬМИ, ПОКА ВЫ
                             СПОКОЙНО
                             РАБОТАЕТЕ</p>
-                        <p class="main__card-link">УЗНАТЬ БОЛЬШЕ <img src="./assets/images/Arrow 3.png" alt="arrow">
-                        </p>
+                            <div class="main__card-l">
+                            
+                                <a class="main__card-link" href="#contacts">УЗНАТЬ БОЛЬШЕ</a><img src="./assets/images/Arrow 3.svg" alt="arrow">
+                            </div>
                     </div>
                 </div>
 
                 <div class="main__card">
-                    <div class="main__icon"><img src="./assets/images/language-icon.png" alt="Language Courses">
+                    <div class="main__icon"><img src="./assets/images/language-icon.svg" alt="Language Courses">
                     </div>
                     <div class="main__card-text">
                         <p class="main__card-title">НЕЗНАНИЕ ЯЗЫКА МЕШАЕТ АДАПТИРОВАТЬСЯ В НОВОЙ СТРАНЕ? </p>
                         <p class="main__card-subtitle">ПРЕДОСТАВИМ ВОЗМОЖНОСТЬ ПРОЙТИ КУРСЫ ЧЕШСКОГО ЯЗЫКА И НАЙТИ
                             КВАЛИФИЦИРОВАННУЮ РАБОТУ</p>
-                        <p class="main__card-link">УЗНАТЬ БОЛЬШЕ <img src="./assets/images/Arrow 3.png" alt="arrow">
-                        </p>
+                            <div class="main__card-l">
+                            
+                                <a class="main__card-link" href="#contacts">УЗНАТЬ БОЛЬШЕ</a><img src="./assets/images/Arrow 3.svg" alt="arrow">
+                            </div>
                     </div>
                 </div>
 
                 <div class="main__card">
-                    <div class="main__icon"><img src="./assets/images/support-icon.png" alt="Support">
+                    <div class="main__icon"><img src="./assets/images/support-icon.svg" alt="Support">
                     </div>
                     <div class="main__card-text">
                         <p class="main__card-title">НУЖНА ПОДДЕРЖКА, ХОТИТЕ ПОДЕЛИТЬСЯ НАБОЛЕВШИМ И ОБРЕСТИ
@@ -149,8 +164,10 @@
                         </p>
                         <p class="main__card-subtitle">ПОЗАБОТИМСЯ ОБ ОКАЗАНИИ
                             ПРОФЕССИОНАЛЬНОЙ ПСИХОЛОГИЧЕСКОЙ ПОМОЩИ</p>
-                        <p class="main__card-link">УЗНАТЬ БОЛЬШЕ <img src="./assets/images/Arrow 3.png" alt="arrow">
-                        </p>
+                            <div class="main__card-l">
+                            
+                                <a class="main__card-link" href="#contacts">УЗНАТЬ БОЛЬШЕ</a><img src="./assets/images/Arrow 3.svg" alt="arrow">
+                            </div>
                     </div>
                 </div>
             </div>
@@ -160,14 +177,16 @@
 
 
     <!-- О НАС -->
+
+    <a name="about"></a>
     <section class="main__about-us">
-        <div class="container">
+                <div class="container">
             <h2 class="main__about-us-title section-title">О НАС</h2>
 
             <div class="main__about-allgrids">
             <div class="main__about-grid">
                 <div>
-                    <div class="main__number"><p class="main__number_black">5</p><p class="main__number_thin">+</p></div>
+                    <p class="main__number_black main__number">5<span class="main__number_thin">+</span></p>
                     <p class="main__number-text">лет помогаем иностранцам легально обосноваться в Чехии</p>
                 </div>
                 <p class="main__about-text">На протяжении 5 лет в компании “Yourfriend” мы помогаем иностранцам легально
@@ -182,7 +201,7 @@
 
             <div class="main__about-grid">
                 <div>
-                    <div class="main__number"><p class="main__number_black">6000</p><p class="main__number_thin">+</p></div>
+                    <p class="main__number_black main__number">6000<span class="main__number_thin">+</span></p>
                     <p class="main__number-text">человек проконсультировали за время работы</p>
                 </div>
                 <p class="main__about-text">
@@ -197,8 +216,8 @@
                 </p>
             </div>
             <div class="main__about-grid">
-                <div id="last_number">
-                    <p class="main__number_black">30</p>
+                <div>
+                    <p class="main__number_black main__number">30</p>
                     <p class="main__number-text">минут — максимальное время отклика на вашу заявку</p>
                 </div>
                 <p class="main__about-text-light">Мы владеем чешским, белорусским, украинским, английским языками.
@@ -224,6 +243,7 @@
 
     <!-- НАША КОМАНДА -->
 
+    <a name="team"></a>
     <section class="main__team-section">
         <div class="container">
             <h2 class="main__team-main-title section-title">НАША КОМАНДА</h2>
@@ -269,14 +289,15 @@
 
 
     <!-- КАК МЫ РАБОТАЕМ -->
-
+    
+    <a name="working"></a>
     <section class="main__working-section">
         <div class="main__working container">
             <h2 class="main__working-title section-title">КАК МЫ РАБОТАЕМ</h2>
             <div class="main__working-content">
                 <div class="main__working-card">
                     <div class="main__working-icon">
-                        <img src="./assets/images/contact-icon.png" alt="Contact">
+                        <img src="./assets/images/contact-icon.svg" alt="Contact">
                     </div>
                     <div class="main__working-info">
                         <p class="main__working-card-title">СВЯЖИТЕСЬ С НАМИ</p>
@@ -286,7 +307,7 @@
 
                 <div class="main__working-card">
                     <div class="main__working-icon">
-                        <img src="./assets/images/consult-icon.png" alt="Consultation">
+                        <img src="./assets/images/consult-icon.svg" alt="Consultation">
                     </div>
                     <div class="main__working-info">
                         <p class="main__working-card-title">КОНСУЛЬТАЦИЯ </p>
@@ -297,7 +318,7 @@
 
                 <div class="main__working-card">
                     <div class="main__working-icon">
-                        <img src="./assets/images/assistance-icon.png" alt="Coordination">
+                        <img src="./assets/images/assistance-icon.svg" alt="Coordination">
                     </div>
                     <div class="main__working-info">
                         <p class="main__working-card-title">СОПРОВОЖДЕНИЕ </p>
@@ -308,7 +329,7 @@
 
                 <div class="main__working-card">
                     <div class="main__working-icon">
-                        <img src="./assets/images/study-help-icon.png" alt="Study help">
+                        <img src="./assets/images/study-help-icon.svg" alt="Study help">
                     </div>
                     <div class="main__working-info">
                         <p class="main__working-card-title">ПОМОЩЬ И ОБУЧЕНИЕ </p>
@@ -317,7 +338,7 @@
                     </div>
                 </div>
             </div>
-            <button class="main__working-button"><a href="#">СВЯЗАТЬСЯ С НАМИ</a></button>
+            <button class="main__working-button"><a href="#contacts">СВЯЗАТЬСЯ С НАМИ</a></button>
         </div>
     </section>
 
@@ -345,14 +366,14 @@
                     <div>
                         <p class="main__how-to-get-card-text">Станция метро “Můstek”,
                             <br>
-                            остановка трамвая “Václavské náměstí”.</p>
-                        <p class="main__how-to-get-card-title">РЕЖИМ РАБОТЫ:</p>
+                            остановка трамвая “Václavské náměstí”</p>
+                        <p class="main__how-to-get-card-title down">РЕЖИМ РАБОТЫ:</p>
                         <p class="main__how-to-get-card-text">пон.-пят. 9.00 — 18.00</p>
                     </div>
                 </div>
 
                 <div class="main__how-to-get-pictures">
-                    <div class="main__how-to-get-card-img"><img src="./assets/images/map.png" alt="Map"></div>
+                    <div class="main__how-to-get-card-img"><img src="./assets/images/map.svg" alt="Map"></div>
 
                     <div class="main__how-to-get-card-video">
                         <video autoplay muted controls="controls" src="./assets/video/ukr_small.mp4">
@@ -365,27 +386,55 @@
 
 
     <!-- КОНТАКТЫ -->
+
+    <a name="contacts"></a>
     <section class="main__contacts">
         <div class="container">
             <h2 class="main__contacts-title section-title">КОНТАКТЫ</h2>
 
             <div class="main__contacts-content">
-                <p><a class="main__contact" href="tel:+420606607847">+420 606 607 847</a></p>
-                <p><a class="main__contact" href="mailto:info@fialena.cz">info@fialena.cz</a></p>
+                <p class="main__p"><a class="main__contact" href="tel:+420606607847">+420 606 607 847</a></p>
+                <p class="main__p"><a class="main__contact  email" href="mailto:info@fialena.cz">info@fialena.cz</a></p>
                 <div class="main__contacts-icons">
-                    <a href=""><img src="./assets/images/icon_telegram.png" alt="Telegram"></a>
-                    <a href=""><img src="./assets/images/icon_instagram.png" alt="Instagram"></a>
-                    <a href=""><img src="./assets/images/icon_whatsapp.png" alt="WhatsApp"></a>
-                </div>
+
+                    <a
+                    href="tg://resolve?domain=pomoc_prace"
+                    class="contacts__link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/images/icon_telegram.svg"
+                      alt="icon_telegram"
+                      class="contacts__icon"></a>
+                  <a
+                    href="https://instagram.com/alenafialena/"
+                    class="contacts__link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/images/icon_2.svg"
+                      alt="icon_2"
+                      class="contacts__icon"></a>
+                  <a
+                    href="https://wa.me/420606607847"
+                    class="contacts__link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/images/icon_whatsapp.svg"
+                      alt="icon_whatsapp"
+                      class="contacts__icon"></a>
+
+                    </div>
             </div>
         </div>
     </section>
 
     <!-- ФУТЕР -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <img src="./assets/images/footer-logo.png" alt="Logo">
+        <div class="container footer__content">
+            <!-- <div class="footer__content"> -->
+                <img class="footer__logo" src="./assets/images/footer-logo.svg" alt="Logo">
                 <br>
                 <a class="footer__link" href="#">2022 &copy; FIALENA</a>
                 <br>
@@ -393,7 +442,7 @@
                 <br>
                 <a class="footer__freepik" href="https://www.freepik.com/free-photo/medium-shot-ukranian-mother-kissing-kid_24996435.htm">Image by Freepik</a>
                 
-            </div>
+            <!-- </div> -->
         </div>
 
 
@@ -402,6 +451,7 @@
 
     <!-- </main> -->
 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="./assets/scripts/prague.js"></script>
 
 </body>

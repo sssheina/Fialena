@@ -670,22 +670,26 @@ textarea {
     margin: 0 30px;
   }
 }
-.header {
+.navigation {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   position: fixed;
-  max-width: 744px;
-  width: 100%;
-  top: 0;
-  z-index: 50;
+  width: 744px;
+  z-index: 999;
 }
 
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
   width: 744px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.13);
-  z-index: 2;
+  border: none;
+  padding: 0px;
+  -webkit-transition: padding 300ms ease-in-out;
+  transition: padding 300ms ease-in-out;
+  padding: 0px;
+  margin: 0 auto;
 }
 
 .header__content {
@@ -693,41 +697,54 @@ textarea {
   justify-content: space-between;
   align-items: center;
   height: 90px;
-}
-
-.header__company {
-  font-weight: 400;
-  font-size: 12px;
-  color: #3919af;
+  gap: 18px;
 }
 
 .header__logo-img {
   vertical-align: baseline;
+  height: 53px;
 }
 
-.header__list {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 14px;
-  margin: 0 14px 0 30px;
+.header__logo {
+  padding: 0px;
+}
+
+nav {
+  display: inline-block;
+}
+
+ul {
+  margin: 0px;
   padding: 0;
-  width: 442px;
-  align-items: center;
 }
 
-.header__list li {
-  list-style: none;
+li {
+  display: inline;
+  list-style-type: none;
+  margin-left: 9px;
 }
 
-.header__link {
+a:hover {
+  transition: 300ms;
+  color: #ffe500;
+}
+
+a {
+  color: #fff;
+}
+
+a {
   text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
   font-size: 11px;
-  font-weight: 500;
-  color: #1e1e1e;
 }
 
-.header__burger {
-  display: none;
+.fixed {
+  position: fixed;
+  background-color: #3919af;
+  z-index: 999;
+  width: 744px;
 }
 
 #language {
@@ -746,102 +763,6 @@ textarea {
   background: #3919af;
 }
 
-@media (max-width: 456px) {
-  .header {
-    height: 70px;
-  }
-  .header__content {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header__logo {
-    display: none;
-  }
-  .header__company {
-    font-weight: 400;
-    font-size: 12px;
-    color: #3919af;
-  }
-  .header__list {
-    padding: 0;
-    display: flex;
-    background: #3919af;
-    position: fixed;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    background: #201a43;
-    width: 90%;
-    height: 100%;
-    top: -110%;
-    left: 0;
-    transition: all 0.3s ease 0s;
-    overflow: auto;
-  }
-  .header__list.active {
-    top: 0;
-    padding: 0;
-  }
-  .header__link {
-    font-size: 24px;
-    font-weight: 500;
-    color: #fff;
-  }
-  .header__burger {
-    display: block;
-    position: relative;
-    width: 50px;
-    height: 31px;
-    cursor: pointer;
-  }
-  .header__burger::before {
-    z-index: 10;
-    content: "";
-    background-color: #3919af;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 0;
-    transition: all 0.3s ease 0s;
-  }
-  .header__burger span {
-    position: absolute;
-    background-color: #3919af;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    top: 14px;
-    transition: all 0.3s ease 0s;
-  }
-  .header__burger::after {
-    z-index: 10;
-    content: "";
-    background-color: #3919af;
-    position: absolute;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    bottom: 0;
-    transition: all 0.3s ease 0s;
-  }
-  .header__burger.active span {
-    transform: scale(0);
-  }
-  .header__burger.active::before {
-    transform: rotate(45deg);
-    width: 100%;
-    top: 14px;
-    height: 3px;
-  }
-  .header__burger.active::after {
-    transform: rotate(-45deg);
-    width: 100%;
-    bottom: 14px;
-    height: 3px;
-  }
-}
 .section-title {
   margin: 0 auto;
   font-weight: 900;
@@ -862,11 +783,10 @@ textarea {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 583px;
+  min-height: 583px;
 }
 
 .main__main-content {
-  height: 355px;
   padding: 59px 0 79px 0;
 }
 
@@ -920,6 +840,10 @@ textarea {
   max-width: 100px;
 }
 
+.main__card-l {
+  width: 126px;
+}
+
 .main__card-text {
   display: flex;
   flex-direction: column;
@@ -950,7 +874,12 @@ textarea {
   font-size: 10px;
   line-height: 135%;
   color: #3919af;
-  margin-bottom: 30px;
+  margin-right: 10px;
+}
+
+.main__card-link:hover {
+  transition: 300ms;
+  color: #ffe500;
 }
 
 @media (max-width: 456px) {
@@ -960,7 +889,7 @@ textarea {
 }
 .main__about-us {
   background: #3919af;
-  height: 868px;
+  min-height: 868px;
 }
 
 .main__about-us-title {
@@ -993,7 +922,7 @@ textarea {
   max-width: 228px;
   color: #ffe500;
   font-weight: 900;
-  font-size: 64px;
+  font-size: calc(20px + 5.9139784946vw);
   margin: 0;
   letter-spacing: 0.06em;
 }
@@ -1002,7 +931,7 @@ textarea {
   max-width: 228px;
   color: #ffe500;
   font-weight: 300;
-  font-size: 64px;
+  font-size: calc(20px + 5.9139784946vw);
   margin: 0;
   letter-spacing: 0.06em;
 }
@@ -1038,10 +967,16 @@ textarea {
   .main__about-grid {
     grid-template-columns: 1fr;
   }
-  .main__number,
-.main__number-text,
+  .main__number-text,
 .empty {
     display: none;
+  }
+  .main__number {
+    display: none;
+  }
+  .main__number_thin, .main__number_black {
+    display: none;
+    font-size: calc(20px + 74.8 * (100vw - 320px) / 744);
   }
   .main__about-grid:last-child {
     margin-bottom: 40px;
@@ -1059,7 +994,8 @@ textarea {
   max-width: 510px;
   margin: 0 auto 27px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  column-gap: 15px;
 }
 
 .main__team-card:last-child {
@@ -1072,7 +1008,11 @@ textarea {
 }
 
 .main__team-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   max-width: 324px;
+  margin: 0 auto;
 }
 
 .main__team-title {
@@ -1113,6 +1053,7 @@ textarea {
 .main__team-text {
     margin: 0 auto 8px;
     text-align: center;
+    width: 100%;
   }
   .main__team-icon {
     margin: 10px auto 25px;
@@ -1151,6 +1092,7 @@ textarea {
   font-size: 14px;
   line-height: 135%;
   color: #1e1e1e;
+  margin-bottom: 15px;
 }
 
 .main__working-text {
@@ -1196,12 +1138,13 @@ textarea {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-bottom: 100px;
+  column-gap: 15px;
 }
 
 .main__how-to-get-text {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  align-items: center;
+  align-items: start;
 }
 
 .main__how-to-get-card-title {
@@ -1209,21 +1152,25 @@ textarea {
   font-size: 14px;
   line-height: 135%;
   color: #3919af;
-  margin: 0;
+}
+
+.down {
+  margin-top: 28px;
 }
 
 .main__how-to-get-card-text {
-  text-align: justify;
   font-weight: 600;
   font-size: 13px;
   line-height: 200%;
   color: #1e1e1e;
+  margin-bottom: 15px;
+  max-width: 256px;
 }
 
 .main__how-to-get-pictures {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  row-gap: 30px;
+  gap: 30px;
 }
 
 .main__how-to-get-card-img img {
@@ -1236,12 +1183,13 @@ textarea {
 .main__how-to-get-card-text {
     text-align: center;
   }
-  .main__how-to-get-content {
-    row-gap: 38px;
+  .main__how-to-get-text {
+    justify-items: center;
   }
 }
 .main__contacts {
   background: #f7f5ff;
+  height: 418px;
 }
 
 .main__contacts-title {
@@ -1268,6 +1216,15 @@ textarea {
   color: #3919af;
 }
 
+.main__p {
+  margin-top: 10px;
+}
+
+.email {
+  text-transform: none;
+  font-size: 14px;
+}
+
 @media (max-width: 456px) {
   .main__contacts-icons {
     column-gap: 30px;
@@ -1275,16 +1232,26 @@ textarea {
   }
 }
 .footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
   background: #3919af;
   height: 188px;
 }
 
 .footer__content {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   max-width: 225px;
-  height: 100%;
-  margin: 38px auto;
+  margin: 0 auto;
+}
+
+.footer__logo {
+  height: 26px;
+  width: 33px;
+  margin: 0 auto;
 }
 
 .footer__link {
@@ -1329,7 +1296,7 @@ textarea {
 }
 
 .btn-up::before {
-  content: url("/assets/images/arrow-up.png");
+  content: url("/assets/images/arrow-up.svg");
 }
 
 .btn-up_hide {
@@ -1339,6 +1306,10 @@ textarea {
 .btn-up_hiding {
   opacity: 0;
   transform: translateY(100px);
+}
+
+.footer__freepik {
+  text-transform: none;
 }
 
 .main__button,

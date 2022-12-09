@@ -64,3 +64,36 @@ headerBurger.addEventListener("click", function () {
   headerList.classList.toggle("active");
   document.querySelector(".body").classList.toggle("lock");
 });
+
+$(function () {
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 20) {
+      $(".navigation").addClass("fixed");
+      $("header").css({
+        "border-bottom": "none",
+        // "width": "744px"
+        padding: "0px 0",
+      });
+    } else {
+      $(".navigation").removeClass("fixed");
+      $("header").css({
+        "border-bottom": "none",
+        padding: "0px 0",
+      });
+    }
+  });
+});
+
+$(function () {
+  // bind change event to select
+  $("#language").on("change", function () {
+    var url = $(this).val(); // get selected value
+    if (url) {
+      // require a URL
+      window.location = url; // redirect
+    }
+    return false;
+  });
+});
