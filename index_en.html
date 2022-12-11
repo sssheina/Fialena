@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -34,17 +34,17 @@
             <ul class="menu__list">
               <li>
                 <a data-goto=".main__about-us" href="#" class="menu__link"
-                  >О НАС</a
+                  >ABOUT US</a
                 >
               </li>
               <li>
                 <a data-goto=".main__help-section" href="#" class="menu__link"
-                  >УСЛУГИ</a
+                  >SERVICES</a
                 >
               </li>
               <li>
                 <a data-goto=".main__team-section" href="#" class="menu__link"
-                  >КОМАНДА</a
+                  >TEAM</a
                 >
               </li>
               <li>
@@ -52,22 +52,22 @@
                   data-goto=".main__working-section"
                   href="#"
                   class="menu__link"
-                  >КАК МЫ РАБОТАЕМ</a
+                  >STEPS OF WORK</a
                 >
               </li>
               <li>
                 <a data-goto=".main__contacts" href="#" class="menu__link"
-                  >КОНТАКТЫ</a
+                  >CONTACTS</a
                 >
               </li>
               <li>
-                <a class="menu__link language">RU</a>
+                <a class="menu__link language">EN</a>
                 <span class="menu__arrow"></span>
                 <ul class="menu__sub-list">
                   <li><a href="index_ua.html" class="menu__sub-link">UA</a></li>
-                  <!-- <li><a href="#" class="menu__sub-link">RU</a></li> -->
+                  <li><a href="index.html" class="menu__sub-link">RU</a></li>
                   <li><a href="index_cz.html" class="menu__sub-link">CZ</a></li>
-                  <li><a href="index_en.html" class="menu__sub-link">EN</a></li>
+                  <!-- <li><a href="index_en.html" class="menu__sub-link">EN</a></li> -->
                 </ul>
               </li>
             </ul>
@@ -76,44 +76,557 @@
       </div>
     </header>
 
+    <!-- блок главной страницы -->
+
     <section class="main__main-section">
-        <div class="main__main-content container">
-          <h1 class="main__title">
-            We will fill the page soon
-          </h1>
+      <div class="main__main-content container">
+        <h1 class="main__title">
+          GET A STABLE JOB AND ACCOMMODATION IN THE CZECH REPUBLIC TODAY
+        </h1>
+        <h2 class="main__subtitle">
+          WE WILL PROVIDE LEGAL AND PSYCHOLOGICAL SUPPORT
+        </h2>
+        <button
+          class="main__button"
+          onclick="window.location.href = '#contacts';"
+        >
+          FIND A JOB
+        </button>
+      </div>
+
+      <!-- Модально -->
+
+      <div id="overlay">
+        <div id="popup" class="popup">
+          <img
+            class="popup__img"
+            src="./assets/images/modal-window-01.png"
+            alt="event-link"
+          />
+
+          <button id="close" class="close" title="Close"></button>
+          <!-- <p class="presents">С БЕСПЛАТНЫМИ ПОДАРКАМИ
+            ДЛЯ ДЕТЕЙ</p> -->
+          <button
+            class="details"
+            title="Получить подарки"
+            onclick="window.location.href = 'event.html';"
+          >
+            Узнать подробнее
+          </button>
         </div>
+      </div>
+      <!-- конец модального окна -->
     </section>
 
-<!-- ФУТЕР -->
-<footer class="footer">
-    <div class="container footer__content">
-      <!-- <div class="footer__content"> -->
-      <img
-        class="footer__logo"
-        src="./assets/images/footer-logo.svg"
-        alt="Logo"
-      />
-      <br />
-      <a class="footer__link" href="#">2022 &copy; FIALENA</a>
-      <br />
-      <a class="footer__link" href="#">2022 &copy; DESIGN AND DEVELOPMENT</a>
-      <br />
-      <a
-        class="footer__freepik"
-        href="https://www.freepik.com/free-photo/medium-shot-ukranian-mother-kissing-kid_24996435.htm"
-        >Image by Freepik</a
-      >
+    <!-- <main class="container"> -->
 
-      <!-- </div> -->
-    </div>
-  </footer>
-  <a href="#" class="btn-up btn-up_hide"></a>
+    <!-- ЧЕМ МЫ МОЖЕМ ПОМОЧЬ -->
 
-  <!-- </main> -->
+    <!-- <a name="help"></a> -->
+    <section class="main__help-section" id="help">
+      <div class="main__help-content container">
+        <h2 class="main__help-title section-title">HOW WE CAN HELP</h2>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="./assets/scripts/prague.js"></script>
+        <div class="main__grid-container">
+          <div class="main__card">
+            <div class="main__icon">
+              <img src="./assets/images/battery-icon.svg" alt="Battery Icon" />
+            </div>
 
+            <div class="main__card-text">
+              <p class="main__card-title">
+                TIRED OF CHANGING PART-TIME JOBS AND FEELING INSECURE ABOUT THE
+                FUTURE?
+              </p>
+              <p class="main__card-subtitle">
+                WE CAN HELP YOU FIND A STABLE JOB
+              </p>
+              <div class="main__card-l">
+                <a class="main__card-link" href="#contacts">FIND OUT MORE</a
+                ><img src="./assets/images/arrow_3.svg" alt="arrow" />
+              </div>
+            </div>
+          </div>
 
-    </body>
-    </html>
+          <div class="main__card">
+            <div class="main__icon">
+              <img src="./assets/images/low-icon.svg" alt="Low Icon" />
+            </div>
+            <div class="main__card-text">
+              <p class="main__card-title">
+                DIFFICULT TO UNDERSTAND THE LAWS OF A FOREIGN COUNTRY IN ORDER
+                TO TAKE ADVANTAGE OF NEW OPPORTUNITIES?
+              </p>
+              <p class="main__card-subtitle">
+                WE WILL ADVISE YOU ON LEGAL MATTERS AND PROVIDE VISA SUPPORT
+              </p>
+              <div class="main__card-l">
+                <a class="main__card-link" href="#contacts">FIND OUT MORE</a
+                ><img src="./assets/images/arrow_3.svg" alt="arrow" />
+              </div>
+            </div>
+          </div>
+
+          <div class="main__card">
+            <div class="main__icon">
+              <img src="./assets/images/house-icon.svg" alt="House Icon" />
+            </div>
+            <div class="main__card-text">
+              <p class="main__card-title">
+                ARE YOU DREADING THE NEW DAY BECAUSE YOU DON'T HAVE A PERMANENT
+                HOME?
+              </p>
+              <p class="main__card-subtitle">
+                WE CAN HELP YOU FIND SUITABLE ACCOMMODATION CLOSE TO YOUR NEW
+                JOB
+              </p>
+              <div class="main__card-l">
+                <a class="main__card-link" href="#contacts">FIND OUT MORE</a
+                ><img src="./assets/images/arrow_3.svg" alt="arrow" />
+              </div>
+            </div>
+          </div>
+
+          <div class="main__card">
+            <div class="main__icon">
+              <img src="./assets/images/child-icon.svg" alt="Child" />
+            </div>
+            <div class="main__card-text">
+              <p class="main__card-title">
+                ARE YOU AFRAID TO LEAVE YOUR CHILDREN ALONE AND LOSE YOUR JOB
+                BECAUSE OF IT?
+              </p>
+              <p class="main__card-subtitle">
+                WE WILL FIND A WAY TO LOOK AFTER YOUR CHILDREN WHILE YOU WORK IN
+                PEACE
+              </p>
+              <div class="main__card-l">
+                <a class="main__card-link" href="#contacts">FIND OUT MORE</a
+                ><img src="./assets/images/arrow_3.svg" alt="arrow" />
+              </div>
+            </div>
+          </div>
+
+          <div class="main__card">
+            <div class="main__icon">
+              <img
+                src="./assets/images/language-icon.svg"
+                alt="Language Courses"
+              />
+            </div>
+            <div class="main__card-text">
+              <p class="main__card-title">
+                DOES NOT KNOWING THE LANGUAGE PREVENT YOU FROM ADAPTING TO A NEW
+                COUNTRY?
+              </p>
+              <p class="main__card-subtitle">
+                WE WILL GIVE YOU THE OPPORTUNITY TO TAKE CZECH LANGUAGE COURSES
+                AND FIND A QUALIFIED JOB
+              </p>
+              <div class="main__card-l">
+                <a class="main__card-link" href="#contacts">FIND OUT MORE</a
+                ><img src="./assets/images/arrow_3.svg" alt="arrow" />
+              </div>
+            </div>
+          </div>
+
+          <div class="main__card">
+            <div class="main__icon">
+              <img src="./assets/images/support-icon.svg" alt="Support" />
+            </div>
+            <div class="main__card-text">
+              <p class="main__card-title">
+                DO YOU NEED SUPPORT, WANT TO SHARE YOUR CONCERNS AND FIND INNER
+                SUPPORT?
+              </p>
+              <p class="main__card-subtitle">
+                WE WILL TAKE CARE OF PROVIDING YOU WITH PROFESSIONAL
+                PSYCHOLOGICAL SUPPORT
+              </p>
+              <div class="main__card-l">
+                <a class="main__card-link" href="#contacts">FIND OUT MORE</a
+                ><img src="./assets/images/arrow_3.svg" alt="arrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- О НАС -->
+
+    <!-- <a name="about"></a> -->
+    <section class="main__about-us" id="about">
+      <div class="container">
+        <h2 class="main__about-us-title section-title">ABOUT US</h2>
+
+        <div class="main__about-allgrids">
+          <div class="main__about-grid">
+            <div>
+              <p class="main__number_black main__number">
+                5<span class="main__number_thin">+</span>
+              </p>
+              <p class="main__number-text">
+                for 5 years we have been helping foreigners to settle legally in
+                the Czech Republic
+              </p>
+            </div>
+            <p class="main__about-text">
+              For 5 years at “Yourfriend” we have been helping foreigners to
+              settle legally in the Czech Republic.
+              <br />
+              <br />
+              During this time more than 6000 people have received our
+              counselling.
+              <br />
+            </p>
+          </div>
+
+          <div class="main__about-grid">
+            <div>
+              <p class="main__number_black main__number">
+                6000<span class="main__number_thin">+</span>
+              </p>
+              <p class="main__number-text">
+                people have been counselled during the period of operation
+              </p>
+            </div>
+            <p class="main__about-text">
+              After the outbreak of war we decided to establish “Fialena”. Our
+              experience will help hundreds of immigrants to find their feet,
+              feel safe and adapt to the Czech Republic.
+              <br />
+              <br />
+              We “Fialena” employees come from the Commonwealth of Independent
+              States. We have experienced all the difficulties of moving and
+              adapting to a new country.
+            </p>
+          </div>
+          <div class="main__about-grid">
+            <div>
+              <p class="main__number_black main__number">30</p>
+              <p class="main__number-text">
+                minutes - maximum response time to your application
+              </p>
+            </div>
+            <p class="main__about-text-light">
+              We speak Czech, Russian, Belarusian, Ukrainian and English.
+              <br />
+              <br />
+              We have extensive experience in assisting with visa support for
+              foreign nationals.
+              <br />
+              <br />
+              We personally communicate with employers and check working
+              conditions.
+              <br />
+              <br />
+              We can ensure your safety and support you in starting a new life
+              in the Czech Republic..
+              <br />
+              <br />
+            </p>
+
+            <p class="empty"></p>
+            <p class="main__about-text">We know the value of your trust!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- НАША КОМАНДА -->
+
+    <!-- <a name="team"></a> -->
+    <section class="main__team-section" id="team">
+      <div class="container">
+        <h2 class="main__team-main-title section-title">OUR TEAM</h2>
+        <div class="main__team-card-container">
+          <div class="main__team-card">
+            <div class="main__team-icon">
+              <img src="./assets/images/alena-icon.png" alt="Алёна" />
+            </div>
+            <div class="main__team-info">
+              <p class="main__team-title">ALENA KAZHAMIAKA</p>
+              <p class="main__team-subtitle">FOUNDER</p>
+              <p class="main__team-text">
+                she is a generator of ideas, the face of the company and the
+                main negotiator with authorities, partners.
+              </p>
+            </div>
+          </div>
+
+          <div class="main__team-card">
+            <div class="main__team-icon">
+              <img src="./assets/images/elena-icon.png" alt="Елена" />
+            </div>
+            <div class="main__team-info">
+              <p class="main__team-title">ELENA GRYNEVYCH</p>
+              <p class="main__team-subtitle">JOB SEARCH CONSULTANT</p>
+              <p class="main__team-text">
+                the main person in the office: handles the documentation,
+                counselling and looking for the best job for you
+              </p>
+            </div>
+          </div>
+
+          <div class="main__team-card">
+            <div class="main__team-icon">
+              <img src="./assets/images/alexandra-icon.png" alt="Александра" />
+            </div>
+            <div class="main__team-info">
+              <p class="main__team-title">ALEXANDRA SHEVCHENKO</p>
+              <p class="main__team-subtitle">COORDINATOR</p>
+              <p class="main__team-text">
+                she manages work processes, helps with adaptation
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАК МЫ РАБОТАЕМ -->
+
+    <!-- <a name="working"></a> -->
+    <section class="main__working-section" id="working">
+      <div class="main__working container">
+        <h2 class="main__working-title section-title">STEPS OF WORK</h2>
+        <div class="main__working-content">
+          <div class="main__working-card">
+            <div class="main__working-icon">
+              <img src="./assets/images/contact-icon.svg" alt="Contact" />
+            </div>
+            <div class="main__working-info">
+              <p class="main__working-card-title">CONTACT US</p>
+              <p class="main__working-text">
+                MAKE AN APPOINTMENT WITH A COUNSELLOR IN THE OFFICE
+              </p>
+            </div>
+          </div>
+
+          <div class="main__working-card">
+            <div class="main__working-icon">
+              <img src="./assets/images/consult-icon.svg" alt="Consultation" />
+            </div>
+            <div class="main__working-info">
+              <p class="main__working-card-title">CONSULTATION</p>
+              <p class="main__working-text">
+                THE PROFESSIONAL WILL ADVISE YOU, SIGN A CONTRACT, FIND YOU A
+                JOB AND ACCOMMODATION
+              </p>
+            </div>
+          </div>
+
+          <div class="main__working-card">
+            <div class="main__working-icon">
+              <img
+                src="./assets/images/assistance-icon.svg"
+                alt="Coordination"
+              />
+            </div>
+            <div class="main__working-info">
+              <p class="main__working-card-title">SUPPORT</p>
+              <p class="main__working-text">
+                THE COORDINATOR WILL ACCOMPANY YOU TO YOUR NEW WORKPLACE, ASSIST
+                YOU AND TRANSLATE FROM CZECH
+              </p>
+            </div>
+          </div>
+
+          <div class="main__working-card">
+            <div class="main__working-icon">
+              <img src="./assets/images/study-help-icon.svg" alt="Study help" />
+            </div>
+            <div class="main__working-info">
+              <p class="main__working-card-title">ASSISTANCE AND TRAINING</p>
+              <p class="main__working-text">
+                YOU CAN GET COUNSELLING FROM A LAWYER, A PSYCHOLOGIST,
+                RETRAINING AND A CZECH LANGUAGE COURSE
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="main__working-button"
+          onclick="window.location.href = '#contacts';"
+        >
+          CONTACT US
+        </button>
+      </div>
+    </section>
+
+    <!-- КАК ДОЕХАТЬ -->
+
+    <section class="main__how-to-get">
+      <div class="container">
+        <h2 class="main__how-to-get-title section-title">HOW TO FIND US</h2>
+
+        <div class="main__how-to-get-content">
+          <div class="main__how-to-get-text">
+            <div>
+              <p class="main__how-to-get-card-title">ADDRESS</p>
+              <p class="main__how-to-get-card-text">
+                Václavské nám. 831/21,
+                <br />
+                kancelář (офис) 371,
+                <br />
+                3rd floor,
+                <br />
+                budova SČMVD,
+                <br />
+                Praha
+              </p>
+            </div>
+            <div>
+              <p class="main__how-to-get-card-text">
+                Metro station “Můstek”,
+                <br />
+                tram station “Václavské náměstí”
+              </p>
+              <p class="main__how-to-get-card-title down">OPERATION MODE</p>
+              <p class="main__how-to-get-card-text">Mon.-Fri. 9.00 — 18.00</p>
+            </div>
+          </div>
+
+          <div class="main__how-to-get-pictures">
+            <div class="map-responsive">
+              <!-- <img src="./assets/images/map.svg" alt="Map" /> -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d640.0517020941674!2d14.42597934037173!3d50.08241475372893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x470b94ed156fc367%3A0x8ca09fdb5a13fa18!2zVsOhY2xhdnNrw6kgbsOhbcSbc3TDrQ!3m2!1d50.0820912!2d14.4258711!4m5!1s0x470b94ecd00210d9%3A0x4cb6e8c75c12b017!2zUEVTIC0gQ2FzaCBFeHByZXNzIFNlcnZpY2UsIEx0ZC4sIEppbmTFmWnFoXNrw6EgOTAwLzcsIDExMCAwMCBOb3bDqSBNxJtzdG8sINCn0LXRhdC40Y8!3m2!1d50.0827855!2d14.4268611!5e0!3m2!1sru!2sby!4v1670754168264!5m2!1sru!2sby"
+                width="260"
+                height="150"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <div class="main__how-to-get-card-video">
+              <video
+                autoplay
+                muted
+                controls="controls"
+                src="./assets/video/ukr_small.mp4"
+              ></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+
+    <!-- <a name="contacts"></a> -->
+    <section class="main__contacts" id="contacts">
+      <div class="container">
+        <h2 class="main__contacts-title section-title">CONTACTS</h2>
+
+        <div class="main__contacts-content">
+          <p class="main__p">
+            <a class="main__contact" href="tel:+420606607847"
+              >+420 606 607 847</a
+            >
+          </p>
+          <p class="main__p">
+            <a class="main__contact email" href="mailto:info@fialena.cz"
+              >info@fialena.cz</a
+            >
+          </p>
+          <div class="main__contacts-icons">
+            <!-- telegram -->
+            <a
+              href="tg://resolve?domain=pomoc_prace"
+              class="contacts__link"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/a_telegram.svg"
+                alt="icon_telegram"
+                class="contacts__icon"
+            /></a>
+
+            <!-- instagram -->
+            <a
+              href="https://instagram.com/alenafialena/"
+              class="contacts__link"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/a_i.svg"
+                alt="icon_2"
+                class="contacts__icon"
+            /></a>
+
+            <!-- whatsapp -->
+            <a
+              href="https://wa.me/420606607847"
+              class="contacts__link"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/a_whatsapp.svg"
+                alt="icon_whatsapp"
+                class="contacts__icon"
+            /></a>
+
+            <!-- facebook -->
+            <a
+              href="https://www.facebook.com/profile.php?id=100087866152250"
+              class="contacts__link"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/a_facebook.svg"
+                alt="icon_whatsapp"
+                class="contacts__icon"
+            /></a>
+
+            <!-- viber -->
+            <a
+              href="viber://chat?number=%2B420606607847"
+              class="contacts__link"
+              target="_blank"
+            >
+              <img
+                src="./assets/images/a_viber.svg"
+                alt="icon_whatsapp"
+                class="contacts__icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+      <div class="container footer__content">
+        <!-- <div class="footer__content"> -->
+        <img
+          class="footer__logo"
+          src="./assets/images/footer-logo.svg"
+          alt="Logo"
+        />
+        <br />
+        <a class="footer__link" href="#">2022 &copy; FIALENA</a>
+        <br />
+        <a class="footer__link" href="#">2022 &copy; DESIGN AND DEVELOPMENT</a>
+        <br />
+        <a
+          class="footer__freepik"
+          href="https://www.freepik.com/free-photo/medium-shot-ukranian-mother-kissing-kid_24996435.htm"
+          >Image by Freepik</a
+        >
+
+        <!-- </div> -->
+      </div>
+    </footer>
+    <a href="#" class="btn-up btn-up_hide"></a>
+
+    <!-- </main> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./assets/scripts/prague.js"></script>
+  </body>
+</html>
