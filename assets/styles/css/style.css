@@ -1079,7 +1079,7 @@ body._touch .menu__list > li._active .menu__arrow {
   max-width: 228px;
   color: #ffe500;
   font-weight: 900;
-  font-size: calc(9px + 5.9139784946vw);
+  font-size: calc(40px + 1.0695187166vw);
   margin: 0;
   letter-spacing: 0.06em;
 }
@@ -1088,7 +1088,7 @@ body._touch .menu__list > li._active .menu__arrow {
   max-width: 228px;
   color: #ffe500;
   font-weight: 300;
-  font-size: calc(20px + 5.9139784946vw);
+  font-size: calc(40px + 1.0695187166vw);
   margin: 0;
   letter-spacing: 0.06em;
 }
