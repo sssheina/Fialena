@@ -29,5 +29,11 @@
 //   font-weight: 900;
 //   font-style: normal;
 // }
+@font-face {
+  font-family: "Casus Pro";
+  src: url(/assets/fonts/CasusPro-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
