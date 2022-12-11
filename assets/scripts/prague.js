@@ -58,76 +58,7 @@ const btnUp = {
 
 btnUp.addEventListener();
 
-// -------------- МЕНЮ БУРГЕР------------
-
-// let headerBurger = document.querySelector(".header__burger");
-// let headerList = document.querySelector(".header__list");
-
-// headerBurger.addEventListener("click", function () {
-//   headerBurger.classList.toggle("active");
-//   headerList.classList.toggle("active");
-//   document.querySelector(".body").classList.toggle("lock");
-// });
-
-// -------------- МЕДЛЕННЫЙ СКРОЛЛ ДЛЯ <header> -----------
-
-// $(function () {
-//   $(window).scroll(function () {
-//     var scroll = $(window).scrollTop();
-
-//     if (scroll >= 20) {
-//       $(".navigation").addClass("fixed");
-//       $("header").css({
-//         "border-bottom": "none",
-//         // "width": "744px"
-//         padding: "0px 0",
-//       });
-//     } else {
-//       $(".navigation").removeClass("fixed");
-//       $("header").css({
-//         "border-bottom": "none",
-//         padding: "0px 0",
-//       });
-//     }
-//   });
-// });
-
-// -------------- ВЫБРАТЬ ЯЗЫК -----------
-
-$(function () {
-  // bind change event to select
-  $("#language").on("change", function () {
-    var url = $(this).val(); // get selected value
-    if (url) {
-      // require a URL
-      window.location = url; // redirect
-    }
-    return false;
-  });
-});
-
-// --------------- МОДАЛЬНОЕ ОКНО -------------
-
-if (window.screen.availWidth < window.screen.availHeight) {
-  document.querySelector(".popup__img").src =
-    "./assets/images/modal-window_mobile.png";
-}
-
-let modalWindow = document.getElementById("overlay");
-let btnClosePopup = document.getElementById("close");
-let delay_popup = 5000;
-
-setTimeout(() => {
-  modalWindow.style.display = "block";
-}, delay_popup);
-
-btnClosePopup.onclick = () => {
-  modalWindow.style.display = "none";
-};
-
-// --------------- СЛОЖНЫЙ БУРГЕР --------------
-
-("use strict");
+// ("use strict");
 
 const isMobile = {
   Android: function () {
@@ -216,3 +147,22 @@ if (menuLinks.length > 0) {
     }
   }
 }
+
+// --------------- МОДАЛЬНОЕ ОКНО -------------
+
+if (window.screen.availWidth < window.screen.availHeight) {
+  document.querySelector(".popup__img").src =
+    "./assets/images/modal-window_mobile-01.png";
+}
+
+let modalWindow = document.getElementById("overlay");
+let btnClosePopup = document.getElementById("close");
+let delay_popup = 5000;
+
+setTimeout(() => {
+  modalWindow.style.display = "block";
+}, delay_popup);
+
+btnClosePopup.onclick = () => {
+  modalWindow.style.display = "none";
+};

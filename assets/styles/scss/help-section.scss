@@ -5,7 +5,7 @@
 .main__grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  column-gap: 29px;
+  gap: 29px;
   justify-items: center;
   margin-bottom: 100px;
 }
@@ -16,7 +16,7 @@
 }
 
 .main__card-l {
-  width: 126px;
+  width: 143px;
 }
 .main__card-text {
   display: flex;
