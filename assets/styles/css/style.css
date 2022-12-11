@@ -1331,9 +1331,19 @@ body._touch .menu__list > li._active .menu__arrow {
   gap: 30px;
 }
 
-.main__how-to-get-card-img img {
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
   width: 100%;
-  object-fit: cover;
+  position: absolute;
 }
 
 @media (max-width: 456px) {
