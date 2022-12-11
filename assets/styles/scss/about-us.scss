@@ -30,7 +30,7 @@
   color: #ffe500;
   font-weight: 900;
   // font-size: 64px;
-  font-size: calc(20px + 44 * (100vw  / 744));
+  font-size: calc(9px + 44 * (100vw / 744));
   margin: 0;
   letter-spacing: 0.06em;
 }
@@ -39,7 +39,7 @@
   color: #ffe500;
   font-weight: 300;
   // font-size: 64px;
-  font-size: calc(20px + 44 * (100vw  / 744));
+  font-size: calc(20px + 44 * (100vw / 744));
   margin: 0;
   letter-spacing: 0.06em;
 }
@@ -71,7 +71,7 @@
   .main__about-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .main__number-text,
   .empty {
     display: none;
@@ -79,7 +79,8 @@
   .main__number {
     display: none;
   }
-  .main__number_thin, .main__number_black {
+  .main__number_thin,
+  .main__number_black {
     display: none;
     font-size: calc(20px + (44 + 44 * 0.7) * ((100vw - 320px) / 744));
   }

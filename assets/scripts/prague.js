@@ -56,44 +56,111 @@ const btnUp = {
 
 btnUp.addEventListener();
 
-let headerBurger = document.querySelector(".header__burger");
-let headerList = document.querySelector(".header__list");
+// ("use strict");
 
-headerBurger.addEventListener("click", function () {
-  headerBurger.classList.toggle("active");
-  headerList.classList.toggle("active");
-  document.querySelector(".body").classList.toggle("lock");
-});
+const isMobile = {
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function () {
+    return (
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows()
+    );
+  },
+};
 
-$(function () {
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
+if (isMobile.any()) {
+  document.body.classList.add("_touch");
 
-    if (scroll >= 20) {
-      $(".navigation").addClass("fixed");
-      $("header").css({
-        "border-bottom": "none",
-        // "width": "744px"
-        padding: "0px 0",
-      });
-    } else {
-      $(".navigation").removeClass("fixed");
-      $("header").css({
-        "border-bottom": "none",
-        padding: "0px 0",
+  let menuArrows = document.querySelectorAll(".menu__arrow");
+  if (menuArrows.length > 0) {
+    for (let index = 0; index < menuArrows.length; index++) {
+      const menuArrow = menuArrows[index];
+      menuArrow.addEventListener("click", function (e) {
+        menuArrow.parentElement.classList.toggle("_active");
       });
     }
-  });
-});
+  }
+} else {
+  document.body.classList.add("_pc");
+}
 
-$(function () {
-  // bind change event to select
-  $("#language").on("change", function () {
-    var url = $(this).val(); // get selected value
-    if (url) {
-      // require a URL
-      window.location = url; // redirect
-    }
-    return false;
+// Меню бургер
+const iconMenu = document.querySelector(".menu__icon");
+const menuBody = document.querySelector(".menu__body");
+if (iconMenu) {
+  iconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle("_lock");
+    iconMenu.classList.toggle("_active");
+    menuBody.classList.toggle("_active");
   });
-});
+}
+
+// Прокрутка при клике
+const menuLinks = document.querySelectorAll(".menu__link[data-goto]");
+if (menuLinks.length > 0) {
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
+
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (
+      menuLink.dataset.goto &&
+      document.querySelector(menuLink.dataset.goto)
+    ) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue =
+        gotoBlock.getBoundingClientRect().top +
+        pageYOffset -
+        document.querySelector("header").offsetHeight;
+
+      if (iconMenu.classList.contains("_active")) {
+        document.body.classList.remove("_lock");
+        iconMenu.classList.remove("_active");
+        menuBody.classList.remove("_active");
+      }
+
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: "smooth",
+      });
+      e.preventDefault();
+    }
+  }
+}
+
+// --------------- МОДАЛЬНОЕ ОКНО -------------
+
+if (window.screen.availWidth < window.screen.availHeight) {
+  document.querySelector(".popup__img").src =
+    "./assets/images/modal-window_mobile-01.png";
+}
+
+let modalWindow = document.getElementById("overlay");
+let btnClosePopup = document.getElementById("close");
+let delay_popup = 5000;
+
+setTimeout(() => {
+  modalWindow.style.display = "block";
+}, delay_popup);
+
+btnClosePopup.onclick = () => {
+  modalWindow.style.display = "none";
+};
