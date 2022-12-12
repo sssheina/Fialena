@@ -653,6 +653,12 @@ textarea {
   padding: 0.2em 0;
 }
 
+@font-face {
+  font-family: "Casus Pro";
+  src: url(/assets/fonts/CasusPro-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
 .body {
   font-family: "Montserrat";
   font-weight: 500;
