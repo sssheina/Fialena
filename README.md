@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/108290460/228539559-2fe7fb49-966c-41a5
 <br>
 <br>
 
-## View our Website:
+## View the Website:
 >Click the image below to view our website!
 
 <br>
