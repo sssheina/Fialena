@@ -81,7 +81,7 @@ We had an incredible experience working with the client. We got the job done and
 
 
 ## Thanks to all Contributors 💪
-Thanks a lot for spending your time helping GTD planner grow. Thanks a lot! Keep rocking!
+Thanks a lot for helping us develop this project. Thanks a lot! Keep rocking!
 
 [![Contributors](https://contrib.rocks/image?repo=sssheina/Fialena)](https://github.com/sssheina/Fialena/graphs/contributors)
 
