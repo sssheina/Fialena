@@ -32,8 +32,9 @@ Project was created by a team of developers and designers from DESIGN AND DEVELO
 ## Brief overview video:
 >You can watch a video of the landing page "Fialena" summary .
 
+<br>
 
-https://user-images.githubusercontent.com/108290460/228504228-15f418ba-36ca-496a-9c25-df8c78cd17f8.mov
+https://user-images.githubusercontent.com/108290460/228539559-2fe7fb49-966c-41a5-a2a8-6e8e1c8c9c0e.mov
 
 
 <br>
@@ -41,6 +42,8 @@ https://user-images.githubusercontent.com/108290460/228504228-15f418ba-36ca-496a
 
 ## View our Website:
 >Click the image below to view our website!
+
+<br>
 
 [<img width="700" src="https://user-images.githubusercontent.com/108290460/228539221-f2ad209d-4b2e-4515-bce9-4fa8ecd1ee3f.png"/>](https://fialena.cz/index_en.html)
 <br>
