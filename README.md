@@ -42,8 +42,7 @@ https://user-images.githubusercontent.com/108290460/228504228-15f418ba-36ca-496a
 ## View our Website:
 >Click the image below to view our website!
 
-
-[<img width="700" src="https://user-images.githubusercontent.com/108290460/228504851-5f7746ba-d511-4b9c-9810-ac75976f1196.png"/>](https://fialena.cz/index_en.html)
+[<img width="700" src="https://user-images.githubusercontent.com/108290460/228539221-f2ad209d-4b2e-4515-bce9-4fa8ecd1ee3f.png"/>](https://fialena.cz/index_en.html)
 <br>
 <br>
 
